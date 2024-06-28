@@ -49,11 +49,13 @@ export class ShoppingCartComponent implements OnInit {
     this.cartService.removeFromCart(productId);
   }
 
-  applyCoupon(id: string): void {
-    this.cartService.applyCoupon(id).subscribe({
+  applyCoupon(code: string): void {
+    this.cartService.applyCoupon(code).subscribe({
       next: response => {
-        if (response) {
-          this.total = this.cartService.getTotal(response.discountPercentage);
+        if (response.length > 0) {
+          const coupon = response[0];
+          this.cartService.setCoupon(coupon);
+          this.total = this.cartService.getTotal(coupon.discountPercentage);
         } else {
           console.error('Cupão inválido');
         }
