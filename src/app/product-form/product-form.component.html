@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()" #productForm="ngForm">
+  <label for="name">Nome:</label>
+  <input type="text" id="name" [(ngModel)]="product.name" name="name" required>
+
+  <label for="description">Descrição:</label>
+  <textarea id="description" [(ngModel)]="product.description" name="description" required></textarea>
+
+  <label for="price">Preço:</label>
+  <input type="number" id="price" [(ngModel)]="product.price" name="price" required>
+
+  <label for="image">Imagem:</label>
+  <input type="text" id="image" [(ngModel)]="product.image" name="image" required>
+
+  <button type="submit">Salvar</button>
+</form>

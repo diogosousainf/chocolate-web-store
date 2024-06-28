@@ -1,0 +1,150 @@
+{
+  "users": [
+    {
+      "id": "101",
+      "type": 1,
+      "name": "admin",
+      "email": "admin@mail.pt",
+      "password": "123"
+    }
+  ],
+  "aboutUs": {
+    "sobreNos": "Somos uma loja de chocolates dedicada a oferecer os melhores produtos, feitos com cacau de alta qualidade. Valorizamos a excelência, a sustentabilidade e a satisfação dos nossos clientes.",
+    "valores": "Qualidade, Sustentabilidade, Satisfação do Cliente",
+    "contactos": {
+      "email": "contato@lojadechocolates.com",
+      "telefone": "213456789",
+      "morada": "Rua dos Chocolates 258, Porto, Portugal"
+    }
+  },
+  "products": [
+    {
+      "id": "1",
+      "name": "Milka caramelo",
+      "description": "Delicioso chocolate ao leite feito com cacau de alta qualidade.",
+      "price": 3.99,
+      "image": "https://s2.minipreco.pt/medias/hc0/h9c/9041438081054.jpg",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "Euforia Amarga",
+      "description": "Chocolate amargo com 70% de cacau, ideal para amantes de chocolate intenso.",
+      "price": 4.49,
+      "image": "https://example.com/images/chocolate_amargo.jpg",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "name": "Trufas dos Sonhos",
+      "description": "Trufas recheadas com ganache de chocolate cremoso.",
+      "price": 5.99,
+      "image": "https://example.com/images/trufas_de_chocolate.jpg",
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "name": "Neve Doce",
+      "description": "Chocolate branco cremoso e doce.",
+      "price": 3.99,
+      "image": "https://example.com/images/chocolate_branco.jpg",
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "name": "Tesouro Sortido",
+      "description": "Uma seleção dos nossos melhores chocolates, ideal para presente.",
+      "price": 14.99,
+      "image": "https://example.com/images/caixa_de_chocolates_sortidos.jpg",
+      "isActive": false
+    },
+    {
+      "id": "7838",
+      "name": "Testeqq",
+      "description": "spihwudcuoh",
+      "price": 100,
+      "image": "https://media.timeout.com/images/105985970/750/422/image.jpg"
+    }
+  ],
+  "coupons": [
+    {
+      "code": "DESCONTO10",
+      "discountPercentage": 10,
+      "expirationDate": "2024-12-31",
+      "id": "1d99"
+    },
+    {
+      "code": "PROMO15",
+      "discountPercentage": 15,
+      "expirationDate": "2024-11-30",
+      "id": "93c5"
+    },
+    {
+      "id": "1869",
+      "code": "3XF2V",
+      "discountPercentage": 50,
+      "expirationDate": "1111-11-11"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "produtos": [
+        {
+          "id": 1,
+          "quantidade": 2
+        },
+        {
+          "id": 3,
+          "quantidade": 1
+        }
+      ],
+      "cupao": "DESCONTO10",
+      "valorFinal": 12.57,
+      "dadosContato": {
+        "nome": "João Silva",
+        "email": "joao.silva@example.com",
+        "morada": "Rua das Flores, 123, Lisboa",
+        "telefone": "912345678"
+      }
+    },
+    {
+      "id": "2",
+      "produtos": [
+        {
+          "id": 2,
+          "quantidade": 1
+        },
+        {
+          "id": 4,
+          "quantidade": 3
+        }
+      ],
+      "cupao": "PROMO15",
+      "valorFinal": 13.97,
+      "dadosContato": {
+        "nome": "Maria Oliveira",
+        "email": "maria.oliveira@example.com",
+        "morada": "Avenida dos Aliados, 456, Porto",
+        "telefone": "934567890"
+      }
+    },
+    {
+      "id": "3",
+      "produtos": [
+        {
+          "id": 5,
+          "quantidade": 1
+        }
+      ],
+      "cupao": null,
+      "valorFinal": 14.99,
+      "dadosContato": {
+        "nome": "Carlos Pereira",
+        "email": "carlos.pereira@example.com",
+        "morada": "Rua da Liberdade, 789, Coimbra",
+        "telefone": "967890123"
+      }
+    }
+  ]
+}
