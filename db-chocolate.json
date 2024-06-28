@@ -19,19 +19,11 @@
   },
   "products": [
     {
-      "id": "1",
-      "name": "Milka caramelo",
-      "description": "Delicioso chocolate ao leite feito com cacau de alta qualidade.",
-      "price": 3.99,
-      "image": "https://s2.minipreco.pt/medias/hc0/h9c/9041438081054.jpg",
-      "isActive": true
-    },
-    {
       "id": "2",
-      "name": "Euforia Amarga",
+      "name": "Toblerone",
       "description": "Chocolate amargo com 70% de cacau, ideal para amantes de chocolate intenso.",
       "price": 4.49,
-      "image": "https://example.com/images/chocolate_amargo.jpg",
+      "image": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwb889d87f/images/col/200/2005662-direito.jpg?sw=2000&sh=2000",
       "isActive": true
     },
     {
@@ -39,7 +31,7 @@
       "name": "Trufas dos Sonhos",
       "description": "Trufas recheadas com ganache de chocolate cremoso.",
       "price": 5.99,
-      "image": "https://example.com/images/trufas_de_chocolate.jpg",
+      "image": "https://oscarsk.wordpress.com/wp-content/uploads/2010/06/sonho-de-valsa-trufa.jpg?w=584",
       "isActive": true
     },
     {
@@ -47,41 +39,42 @@
       "name": "Neve Doce",
       "description": "Chocolate branco cremoso e doce.",
       "price": 3.99,
-      "image": "https://example.com/images/chocolate_branco.jpg",
+      "image": "https://res.cloudinary.com/fonte-online/image/upload/v1/PDO_PROD/599815_1.jpg",
       "isActive": true
     },
     {
       "id": "7838",
-      "name": "Testeqq",
-      "description": "spihwudcuoh",
-      "price": 100,
+      "name": "Chocolate Negro",
+      "description": "Chocolate descriçao",
+      "price": 1,
       "image": "https://media.timeout.com/images/105985970/750/422/image.jpg"
     },
     {
       "id": "24cf",
       "name": "KitKat",
-      "description": "deefefefef",
+      "description": "Chocolate descriçao",
       "price": 2,
       "image": "https://glood.b-cdn.net/static/product/1802/300/nestle-kit-kat-original-415g.png?t=240328145531"
     },
     {
       "id": "40d5",
       "name": "Mnms",
-      "description": "w2dwdd",
+      "description": "Chocolate descriçao",
       "price": 3,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQScsAZYoVmZ8qtyGdvh3nbIaWlgcI-0HS7HQ&s"
     },
     {
       "id": "69a1",
-      "name": "wwdw",
-      "description": "dwdwd",
-      "price": 2
+      "name": "Kinder",
+      "description": "Chocolate descriçao",
+      "price": 10,
+      "image": "https://s0.minipreco.pt/medias/h2b/h1a/9044134363166.jpg"
     },
     {
       "id": "a207",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsnAkk57wtW96QULbBPOGN3d-MB-eVSauDpQ&s",
       "name": "Nestle",
-      "description": "fefeffefe",
+      "description": "Chocolate descriçao",
       "price": 2
     }
   ],
