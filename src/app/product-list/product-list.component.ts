@@ -18,7 +18,11 @@ import {CartService} from "../cart.service";
   export class ProductListComponent implements OnInit {
   products: any[] = [];
 
-  constructor(private productService: ProductService, private router: Router ,  private cartService: CartService) {}
+  constructor(
+    private productService: ProductService,
+    private router: Router,
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
@@ -26,21 +30,22 @@ import {CartService} from "../cart.service";
     });
   }
 
-  showProduct(id: number): void {
+  showProduct(id: string): void {
     this.router.navigate([`/show/${id}`]);
   }
 
-  editProduct(id: number): void {
+  editProduct(id: string): void {
     this.router.navigate([`/edit/${id}`]);
   }
 
-  deleteProduct(id: number): void {
+  deleteProduct(id: string): void {
     this.productService.deleteProduct(id).subscribe(() => {
       this.products = this.products.filter(product => product.id !== id);
     });
   }
+
   addToCart(product: any): void {
     this.cartService.addToCart(product);
   }
-
 }
+

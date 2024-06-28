@@ -6,7 +6,6 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class ProductService {
-
   private apiUrl = 'http://localhost:3000/products'; // URL do backend
 
   constructor(private http: HttpClient) {}
@@ -15,7 +14,7 @@ export class ProductService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  getProduct(id: number): Observable<any> {
+  getProduct(id: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
@@ -23,11 +22,11 @@ export class ProductService {
     return this.http.post(this.apiUrl, product);
   }
 
-  updateProduct(id: number, product: any): Observable<any> {
+  updateProduct(id: string, product: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, product);
   }
 
-  deleteProduct(id: number): Observable<any> {
+  deleteProduct(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

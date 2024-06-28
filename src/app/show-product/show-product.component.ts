@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, RouterLink} from "@angular/router";
 import {ProductService} from "../product.service";
 import {CurrencyPipe} from "@angular/common";
@@ -14,9 +14,8 @@ import {CartService} from "../cart.service";
   templateUrl: './show-product.component.html',
   styleUrl: './show-product.component.css'
 })
-export class ShowProductComponent {
-
-  product: any;
+export class ShowProductComponent implements OnInit{
+  product: any = {};
 
   constructor(
     private route: ActivatedRoute,
@@ -25,9 +24,11 @@ export class ShowProductComponent {
   ) {}
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
+    const id = this.route.snapshot.paramMap.get('id')!;
     this.productService.getProduct(id).subscribe(data => {
       this.product = data;
+    }, error => {
+      console.error('Erro ao buscar produto:', error);
     });
   }
 

@@ -22,14 +22,14 @@ export class EditProductComponent {
   ) {}
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
+    const id = this.route.snapshot.paramMap.get('id')!;
     this.productService.getProduct(id).subscribe(data => {
       this.product = data;
     });
   }
 
   onSubmit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
+    const id = this.route.snapshot.paramMap.get('id')!;
     this.productService.updateProduct(id, this.product).subscribe(() => {
       this.router.navigate(['/products']);
     });

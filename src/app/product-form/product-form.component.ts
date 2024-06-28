@@ -14,7 +14,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ProductFormComponent {
   product: any = {};
-  id: number | null = null;
+  id: string | null = null;
 
   constructor(
     private productService: ProductService,
@@ -23,7 +23,7 @@ export class ProductFormComponent {
   ) {}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.paramMap.get('id');
     if (this.id) {
       this.productService.getProduct(this.id).subscribe(data => {
         this.product = data;
@@ -34,11 +34,11 @@ export class ProductFormComponent {
   onSubmit(): void {
     if (this.id) {
       this.productService.updateProduct(this.id, this.product).subscribe(() => {
-        this.router.navigate(['/admin/products']);
+        this.router.navigate(['/products']);
       });
     } else {
       this.productService.addProduct(this.product).subscribe(() => {
-        this.router.navigate(['/admin/products']);
+        this.router.navigate(['/products']);
       });
     }
   }

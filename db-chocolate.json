@@ -51,19 +51,38 @@
       "isActive": true
     },
     {
-      "id": "5",
-      "name": "Tesouro Sortido",
-      "description": "Uma seleção dos nossos melhores chocolates, ideal para presente.",
-      "price": 14.99,
-      "image": "https://example.com/images/caixa_de_chocolates_sortidos.jpg",
-      "isActive": false
-    },
-    {
       "id": "7838",
       "name": "Testeqq",
       "description": "spihwudcuoh",
       "price": 100,
       "image": "https://media.timeout.com/images/105985970/750/422/image.jpg"
+    },
+    {
+      "id": "24cf",
+      "name": "KitKat",
+      "description": "deefefefef",
+      "price": 2,
+      "image": "https://glood.b-cdn.net/static/product/1802/300/nestle-kit-kat-original-415g.png?t=240328145531"
+    },
+    {
+      "id": "40d5",
+      "name": "Mnms",
+      "description": "w2dwdd",
+      "price": 3,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQScsAZYoVmZ8qtyGdvh3nbIaWlgcI-0HS7HQ&s"
+    },
+    {
+      "id": "69a1",
+      "name": "wwdw",
+      "description": "dwdwd",
+      "price": 2
+    },
+    {
+      "id": "a207",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsnAkk57wtW96QULbBPOGN3d-MB-eVSauDpQ&s",
+      "name": "Nestle",
+      "description": "fefeffefe",
+      "price": 2
     }
   ],
   "coupons": [
@@ -84,6 +103,12 @@
       "code": "3XF2V",
       "discountPercentage": 50,
       "expirationDate": "1111-11-11"
+    },
+    {
+      "id": "a9b2",
+      "code": "2222",
+      "discountPercentage": 100,
+      "expirationDate": "5555-05-05"
     }
   ],
   "orders": [
@@ -144,6 +169,58 @@
         "email": "carlos.pereira@example.com",
         "morada": "Rua da Liberdade, 789, Coimbra",
         "telefone": "967890123"
+      }
+    },
+    {
+      "id": "b06b",
+      "produtos": [
+        {
+          "id": "7838",
+          "name": "Testeqq",
+          "description": "spihwudcuoh",
+          "price": 100,
+          "image": "https://media.timeout.com/images/105985970/750/422/image.jpg",
+          "quantity": 2
+        },
+        {
+          "id": "5",
+          "name": "Tesouro Sortido",
+          "description": "Uma seleção dos nossos melhores chocolates, ideal para presente.",
+          "price": 14.99,
+          "image": "https://example.com/images/caixa_de_chocolates_sortidos.jpg",
+          "isActive": false,
+          "quantity": 1
+        }
+      ],
+      "cupao": "PROMO15",
+      "valorFinal": 182.7415,
+      "dadosContato": {
+        "nome": "Marcos Carvalhos",
+        "email": "diogosousainf@gmail.com",
+        "morada": "Rua Viriato Barbosa 750 3Esquerdo frente",
+        "telefone": "914976204"
+      }
+    },
+    {
+      "id": "a714",
+      "produtos": [
+        {
+          "id": "1",
+          "name": "Milka caramelo",
+          "description": "Delicioso chocolate ao leite feito com cacau de alta qualidade.",
+          "price": 3.99,
+          "image": "https://s2.minipreco.pt/medias/hc0/h9c/9041438081054.jpg",
+          "isActive": true,
+          "quantity": 2
+        }
+      ],
+      "cupao": "2222",
+      "valorFinal": 0,
+      "dadosContato": {
+        "nome": "Marcos Carvalho",
+        "email": "diogosousainf@gmail.com",
+        "morada": "Rua Viriato Barbosa 750 3Esquerdo frente",
+        "telefone": "914976204"
       }
     }
   ]
