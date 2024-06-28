@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -14,19 +14,20 @@ export class CouponService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  getCoupon(code: string): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${code}`);
+  getCoupon(code: string): Observable<any[]> {
+    const params = new HttpParams().set('code', code);
+    return this.http.get<any[]>(this.apiUrl, { params });
   }
 
   addCoupon(coupon: any): Observable<any> {
     return this.http.post(this.apiUrl, coupon);
   }
 
-  updateCoupon(code: string, coupon: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${code}`, coupon);
+  updateCoupon(id: string, coupon: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, coupon);
   }
 
-  deleteCoupon(code: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${code}`);
+  deleteCoupon(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

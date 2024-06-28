@@ -29,9 +29,12 @@ export class CouponListComponent implements OnInit {
     this.router.navigate([`/coupons/edit/${code}`]);
   }
 
-  deleteCoupon(code: string): void {
-    this.couponService.deleteCoupon(code).subscribe(() => {
-      this.coupons = this.coupons.filter(coupon => coupon.code !== code);
+  deleteCoupon(id: string): void {
+    this.couponService.deleteCoupon(id).subscribe(() => {
+      this.coupons = this.coupons.filter(coupon => coupon.id !== id);
     });
   }
 }
+
+
+

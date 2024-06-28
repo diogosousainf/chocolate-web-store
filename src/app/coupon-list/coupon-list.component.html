@@ -20,7 +20,7 @@
       <td class="w-1/4 py-3 px-4">{{ coupon.expirationDate }}</td>
       <td class="py-3 px-4">
         <button (click)="editCoupon(coupon.code)" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded mr-2">Editar</button>
-        <button (click)="deleteCoupon(coupon.code)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Remover</button>
+        <button (click)="deleteCoupon(coupon.id)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Remover</button>
       </td>
     </tr>
     </tbody>

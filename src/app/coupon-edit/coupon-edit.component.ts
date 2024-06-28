@@ -28,7 +28,12 @@ export class CouponEditComponent implements OnInit {
     if (code) {
       this.couponService.getCoupon(code).subscribe(
         data => {
-          this.coupon = data;
+          if (data.length > 0) {
+            this.coupon = data[0];
+          } else {
+            console.error('Cupão não encontrado');
+            // Redirecionar ou mostrar mensagem de erro
+          }
         },
         error => {
           console.error('Erro ao buscar cupão:', error);
@@ -39,8 +44,9 @@ export class CouponEditComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.couponService.updateCoupon(this.coupon.code, this.coupon).subscribe(() => {
+    this.couponService.updateCoupon(this.coupon.id, this.coupon).subscribe(() => {
       this.router.navigate(['/coupons']);
     });
   }
 }
+
