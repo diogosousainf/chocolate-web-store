@@ -20,7 +20,7 @@ export class ShoppingCartComponent implements OnInit {
   cart: any[] = [];
   coupon: any = null;
   total: number = 0;
-  couponCode: string = '';  
+  couponCode: string = '';
 
   name: string = '';
   email: string = '';
@@ -49,16 +49,19 @@ export class ShoppingCartComponent implements OnInit {
     this.cartService.removeFromCart(productId);
   }
 
-  applyCoupon(code: string): void {
-    this.cartService.applyCoupon(code).subscribe(
-      coupon => {
-        this.cartService.applyCoupon(coupon);
-        this.total = this.cartService.getTotal();
+  applyCoupon(id: string): void {
+    this.cartService.applyCoupon(id).subscribe({
+      next: response => {
+        if (response) {
+          this.total = this.cartService.getTotal(response.discountPercentage);
+        } else {
+          console.error('Cupão inválido');
+        }
       },
-      error => {
-        console.error('Cupão inválido', error);
+      error: error => {
+        console.error('Erro ao buscar cupão:', error);
       }
-    );
+    });
   }
 
   checkout(name: string, email: string, address: string, phone: string): void {
@@ -69,9 +72,14 @@ export class ShoppingCartComponent implements OnInit {
       dadosContato: { nome: name, email: email, morada: address, telefone: phone }
     };
 
-    this.orderService.createOrder(order).subscribe(response => {
-      this.cartService.clearCart();
-      this.router.navigate(['/confirmation']);
+    this.orderService.createOrder(order).subscribe({
+      next: response => {
+        this.cartService.clearCart();
+        this.router.navigate(['/confirmation']);
+      },
+      error: error => {
+        console.error('Erro ao criar pedido:', error);
+      }
     });
   }
 }

@@ -32,16 +32,19 @@ export class CartService {
     this.cart.next(currentCart);
   }
 
-  applyCoupon(code: string): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/coupons/${code}`);
+  applyCoupon(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/coupons/${id}`);
   }
 
-  getTotal(): number {
+  setCoupon(coupon: any): void {
+    this.coupon.next(coupon);
+  }
+
+  getTotal(discountPercentage? : number): number {
     const currentCart = this.cart.value;
     let total = currentCart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const currentCoupon = this.coupon.value;
-    if (currentCoupon) {
-      total = total - (total * (currentCoupon.discountPercentage / 100));
+    if (discountPercentage) {
+      total = total - (total * (discountPercentage / 100));
     }
     return total;
   }
