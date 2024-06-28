@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CurrencyPipe, NgForOf} from "@angular/common";
 import {ProductService} from "../product.service";
 import {Router, RouterLink} from "@angular/router";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'app-product-list',
@@ -17,7 +18,7 @@ import {Router, RouterLink} from "@angular/router";
   export class ProductListComponent implements OnInit {
   products: any[] = [];
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router ,  private cartService: CartService) {}
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
@@ -38,4 +39,8 @@ import {Router, RouterLink} from "@angular/router";
       this.products = this.products.filter(product => product.id !== id);
     });
   }
+  addToCart(product: any): void {
+    this.cartService.addToCart(product);
+  }
+
 }

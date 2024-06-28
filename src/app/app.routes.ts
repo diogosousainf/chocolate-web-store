@@ -8,6 +8,7 @@ import {CouponFormComponent} from "./coupon-form/coupon-form.component";
 import {CouponEditComponent} from "./coupon-edit/coupon-edit.component";
 import {OrderListComponent} from "./order-list/order-list.component";
 import {CompanyInfoComponent} from "./company-info/company-info.component";
+import {ShoppingCartComponent} from "./shopping-cart/shopping-cart.component";
 
 export const routes: Routes = [
   {path : '', redirectTo: 'products', pathMatch: 'full'},
@@ -20,6 +21,8 @@ export const routes: Routes = [
   { path: 'coupons/edit/:code', component: CouponEditComponent },
   { path: 'orders', component: OrderListComponent },
   { path: 'about', component: CompanyInfoComponent },
+  { path: 'cart', component: ShoppingCartComponent},
+
 
 
 ];

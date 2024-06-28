@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ActivatedRoute, RouterLink} from "@angular/router";
 import {ProductService} from "../product.service";
 import {CurrencyPipe} from "@angular/common";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'app-show-product',
@@ -19,7 +20,8 @@ export class ShowProductComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -27,5 +29,9 @@ export class ShowProductComponent {
     this.productService.getProduct(id).subscribe(data => {
       this.product = data;
     });
+  }
+
+  addToCart(product: any): void {
+    this.cartService.addToCart(product);
   }
 }
